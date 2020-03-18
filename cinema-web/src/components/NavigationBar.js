@@ -5,7 +5,10 @@ class NavigationBar extends Component {
   render(){
     return(
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Navbar.Brand href="#home">CinemaCafeteria</Navbar.Brand>
+        <Navbar.Brand href="#specials">
+          <img alt="popcorn logo" src="/popcorn.svg" width="30" height="30" className=""/>{' '}
+          CinemaCafeteria
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
