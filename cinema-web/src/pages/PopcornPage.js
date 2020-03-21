@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 import Popcorns from '../components/Popcorns';
+import './PopcornPage.css';
 
 class Popcorn extends Component {
     state = { 
