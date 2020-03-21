@@ -6,9 +6,9 @@ import './SnacksPage.css';
 class SnacksPage extends Component {
     state = {
         snacks: [
-            {name: 'Snickers', price: '2$'},
-            {name: 'Pesekzman', price: '1.85$'},
-            {name: 'Kifkef', price: '1$'}
+            {id: 1, name: 'Snickers', price: '2$'},
+            {id: 2, name: 'Pesekzman', price: '1.85$'},
+            {id: 3, name: 'Kifkef', price: '1$'}
         ]
     }
     render() { 

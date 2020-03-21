@@ -6,17 +6,23 @@ import './DrinksPage.css';
 class DrinksPage extends Component {
     state = {
         drinks: [
-            {kind: 'Soda', size: '500ml, 750ml, 1l', price: '1$, 3$, 4$'},
-            {kind: 'Water', size: '500ml, 750ml, 1l', price: '0.5$, 2$, 3$'},
-            {kind: 'Fanta', size: '500ml, 750ml, 1l', price: '2$, 3.5$, 5$'},
+            {id: 1, kind: 'Soda', size: '500ml, 750ml, 1l', price: '1$, 3$, 4$'},
+            {id: 2, kind: 'Water', size: '500ml, 750ml, 1l', price: '0.5$, 2$, 3$'},
+            {id: 3, kind: 'Fanta', size: '500ml, 750ml, 1l', price: '2$, 3.5$, 5$'},
         ]
     }
     render() { 
+
+        let drnks = (
+            <div>
+                {this.state.drinks.map(drink => {
+                    return <Drinks kind={drink.kind} size={drink.size} price={drink.price} key={drink.id}/>
+                })}
+            </div>
+        );
         return ( 
             <div>
-            <Drinks kind={this.state.drinks[0].kind} size={this.state.drinks[0].size} price={this.state.drinks[0].price}/>
-            <Drinks kind={this.state.drinks[1].kind} size={this.state.drinks[1].size} price={this.state.drinks[1].price}/>
-            <Drinks kind={this.state.drinks[2].kind} size={this.state.drinks[2].size} price={this.state.drinks[2].price}/>
+                {drnks}
             </div>
          );
     }
