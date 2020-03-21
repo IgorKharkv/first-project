@@ -12,11 +12,17 @@ class SnacksPage extends Component {
         ]
     }
     render() { 
+
+        let sncks = (
+            <div>
+                {this.state.snacks.map(snack => {
+                    return <Snacks name={snack.name} price={snack.price} key={snack.id}/>
+                })}
+            </div>
+        );
         return ( 
             <div>
-                <Snacks name={this.state.snacks[0].name} price={this.state.snacks[0].price}/>
-                <Snacks name={this.state.snacks[1].name} price={this.state.snacks[1].price}/>
-                <Snacks name={this.state.snacks[2].name} price={this.state.snacks[2].price}/>
+                {sncks}
             </div>
          );
     }
